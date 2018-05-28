@@ -1,0 +1,401 @@
+/* body{
+    background: url(../images/dark.png);
+    width:100%;
+    height:100%;
+    background-color: #777;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:auto;
+} */
+
+/* Navigation Bar Styling */
+.navbar-header{
+    background-color: rgba(220, 220, 220, 0.815) ;
+    color: brown;
+}
+
+.container-fluid{
+    background-color:  rgba(220, 220, 220, 0.815);
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.navbar-brand{
+    color:rgb(201, 16, 16);
+    background-color:  rgba(220, 220, 220, 0.815);
+    font-family: "BenchNine" sans-serif; 
+}
+.navbar-brand span{
+    /* background-color: darkcyan; */
+    color:rgb(201, 16, 16);
+}
+.navbar-brand span:hover{
+    /* background-color: darkcyan; */
+    color: rgb(57, 9, 134);
+}
+.navbar-default{
+    background-color: rgba(220, 220, 220, 0.815);
+    color: brown;
+    font-size: 1em;
+}
+.navbar-toggle{
+    color: black;
+    background-color: rgba(220, 220, 220, 0.815);
+}
+.navbar-nav{
+    color: aquamarine;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: "BenchNine" sans-serif; 
+    color:rgb(201, 16, 16);
+    /* font-size: 1em;
+    font-weight: bold; */
+    padding: 0px;
+    margin: 0px;
+}
+.navbar-nav li:hover{
+    /* color: #ffffff; */
+    color: rgb(80, 134, 9);
+    background: #4e4e4e;
+    transform: scale(1.25);
+}
+.icon-bar{
+    color: black;
+}
+/*Jumbotron Styling */
+.jumbotron{
+    color: rgb(20, 192, 86);
+    background-color: rgb(156, 14, 14);
+    font-family: 'Sorts Mill Goudy', serif;
+    font-style: normal;
+    font-stretch: expanded;
+    font-size: 5ep;
+    text-align: center;
+}
+.jumbotron .jumbo-theme{
+    /* background-image: url("../images/fruits3.jpg"); */
+    background-blend-mode: screen;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-size: unset;
+}
+/*Footer Styling */
+.footer {
+    position: fixed;
+    /* bottom: 0;
+    width: 100%; */
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    /* background-color: #f5f5f513 slategray;
+    background-color: rgba(220, 220, 220, 0.815);
+    text-align: center;  */
+
+    /* position: relative; */
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  /* Footer Styling */
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+  
+  .container {
+    width: auto;
+    max-width: 980px;
+    padding: 0 15px;
+    min-width: 480px;
+  }
+  body{
+      width:auto;
+  }
+  /****************************************************/
+
+
+  /* Main Game Section formatting */
+  .btn{
+    width: 30px;
+    padding: 3px;
+    margin: 3px;
+  }
+  .btn3d{
+      position: relative;
+      top: -6px;
+      border: 0;
+      transition: all 40ms linear;
+      margin-top: 10px;
+      margin-left: 2px;
+      margin-right: 2px;
+      
+  }
+  .btnNoSelect{
+      color: crimson;
+      background-color: darkorange;
+      border-radius: 3px;
+  }
+  .btnStart{
+    width: 150px;
+    height: 50px;
+    padding: 3px;
+    margin: 3px;
+    margin-left: 400px;
+    border-radius: 10px;
+  }
+  .gameStart{
+      align-content: center;
+  }
+  /*Table and Cell Styling */
+  .guess-word{
+      text-align: left;
+
+  }
+
+  .guess-word h3{
+    /*background-color: sienna; */
+  }
+  .TableStyle{
+      align-content: center;
+      align-self: center;
+      
+      
+      
+  }
+  .RowStyle{
+    padding: 0;
+    width: 500px;
+    height: 100px;
+    text-align: center;
+    font-size: larger;
+    font-style: normal;
+    font-family: sans-serif;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 50px;     
+    /* border-bottom-color: brown; */
+    border-spacing: 4px;
+    /* border-style: solid;  */
+    column-rule: #371dcc;
+  }
+  .CellStyleInvisible{
+    padding: 7px;
+    margin: 3px;
+    width: 30px;
+    /*height: 50px; */
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-family: sans-serif;
+    /* text-decoration: underline; */
+    display: none;
+    /* font-size: 50px; */
+    border-bottom: 5px; 
+    border-bottom-color: black;
+    border-width: 5px;
+    border-spacing: 2px;
+    border-collapse: separate;
+    border-bottom-width: thick;
+  }
+
+  .CellStyleVisible{
+    padding: 7px;
+    margin: 3px;
+    width: 30px;
+    /*height: 50px; */
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-family: sans-serif;
+    /* text-decoration: underline; */
+    display: -webkit-inline-box;
+    /* font-size: 50px; */
+    border-bottom: 5px; 
+    border-bottom-color: black;
+    border-width: 5px;
+    border-spacing: 2px;
+    border-collapse: separate;
+    border-bottom-width: thick;
+  }
+  .CellStyleVisibleF{
+    padding: 7px;
+    margin: 3px;
+    /* width: 50px;*/
+    height: 5px; 
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-family: sans-serif;
+    /* text-decoration: underline; */
+    display: inline-block;
+    /* font-size: 50px; */
+    border-bottom: 5px; 
+    border-bottom-color: black;
+    border-width: 5px;
+    border-spacing: 2px;
+    border-collapse: separate;
+    border-bottom-width: thick;
+  }
+
+  /*Keyboard formatting*/
+  .letter-keyboard{
+      cursor: not-allowed;
+  }
+  /* Main Game Section formatting */
+
+.asidestyle{
+     color: rgb(13, 13, 14);
+     text-align: center;
+     margin: 0px;
+     padding: 0px;
+     border: darkblue;
+     background-color: darkgrey;
+     height: 150px;
+}
+.asidestyle1{
+    color: rgb(13, 13, 14);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    border: darkblue;
+    background-color: darkgrey;
+    height: 150px;
+}
+.asidestyle2{
+    color: rgb(13, 13, 14);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    border: darkblue;
+    border-block-end-style: double;
+    background-color: darkgrey;
+    height: 250px;
+}
+.asidestyle3{
+    color: rgb(13, 13, 14);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    border: darkblue;
+    background-color: darkgrey;
+    height: 420px;
+}
+.asidestyle3 h4{
+    padding: 0px;
+    margin: 0%;
+}
+.asidestyle3 h5{
+    padding: 2px;
+    margin: 0%;
+    background-color: rgb(158, 125, 95);
+}
+.asidestyle1 h4{
+    padding: 0px;
+    margin: 0%;
+}
+
+.asidestyle1 p{
+    text-align: left;
+    padding: 1px;
+    padding-left: 5px;
+    margin: 0px;
+    border: darkblue;
+    border-block-end-style: double;
+    font-size: medium;
+    color: #0c0c0c  ;
+    text-indent: 0px;
+}
+
+.asidestyle1 h4{
+    font-size: large;
+    color: #0e0e0f  ;
+    background-color: cadetblue;
+}
+
+.asidestyle2 h4{
+    font-size: large;
+    color: #0e0e0f  ;
+    background-color: cadetblue;
+}
+.asidestyle3 h4{
+    font-size: large;
+    color: #0e0e0f  ;
+    background-color: cadetblue;
+}
+.stattable label{
+    text-align: right;
+}
+
+
+  /* Index Page Styling */
+  .imgindex {
+    float: left; 
+    opacity: 1.2;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
+    padding: 5px;
+    margin: 10px;
+}
+.imgindex:hover {
+    opacity: 1.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+p{
+    text-align: justify;
+    color: #777;
+    /* background-color: #ebebeb; */
+    padding:10px;
+    margin:5px;
+    font-family: 'Slabo-27px', sans-serif;
+    text-indent: 50px;
+}
+  /* Portfolio Page Styling */
+
+  .imgindex {
+    float: left; 
+    opacity: 1.2;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
+    padding: 5px;
+    margin: 10px;
+}
+.imgindex:hover {
+    opacity: 1.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+/* .col-md-4{
+    width:270px;
+    height: 180px;;
+} */
+.thumbnail{
+    /* width:100%; */
+    overflow: none;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.col-md-4 .thumbnail .img{
+    /* -webkit-transition: all 0.5s ease; */
+    background-color: red;
+    width: 270px;
+    height: 180px;
+}
+
+
+.thumbnail img:hover{
+    transform:  scale(1.2);
+}
+
+
+.image-resize{
+    width: 275px;
+    height: 180px;
+    border: 2px;
+    border-color: #371dcc;
+    margin:5px;
+    padding: 5px;
+    object-fit: contain;
+}

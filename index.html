@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Portfolio
+        </title>
+        <link rel="shortcut icon" type="image/jpg" href="assets/images/Favicon1-Round.jpg">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" > 
+        <script src="assets/javascript/game.js"></script>
+        <!-- Google fonts selections    1. (CSS= font-family: 'Frank Ruhl Libre', serif;) 2. (CSS=font-family: 'Frank Ruhl Libre', serif;
+        font-family: 'BenchNine', sans-serif; 3. (CSS=font-family: 'Frank Ruhl Libre', serif;
+        font-family: 'BenchNine', sans-serif;
+        font-family: 'Sorts Mill Goudy', serif;-->
+        <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=BenchNine|Frank+Ruhl+Libre" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=BenchNine|Frank+Ruhl+Libre|Sorts+Mill+Goudy" rel="stylesheet">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    </head>
+    <body onload="initialload()">
+        <div class="headerbackground">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                        <div class="container-fluid">
+                          <!-- Brand and toggle get grouped for better mobile display -->
+                          <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" >
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+
+                            <a class="navbar-brand" href="https://en.wikipedia.org/wiki/Hangman_(game)" target="_blank">
+                                <span class="glyphicon glyphicon-globe" aria-hidden="true">Hangman Game</span>
+                            </a>
+                          </div>
+                      
+                          <!-- Collect the nav links, forms, and other content for toggling -->
+                          <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav pull-right">
+                              <li><a href="index.html">About <span class="sr-only">(current)</span></a></li>
+                              <li><a href="portfolio.html">Portfolio <span class="sr-only">(current)</span></a></li>
+                              <li><a href="contact.html">Contact <span class="sr-only">(current)</span></a></li>
+                            </ul> -->
+                           </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                </nav>
+        </div>
+        <div class="jumbotron">
+                <h1 class="display-h1">Word Game</h1>
+                <div class="jumbo-theme">
+                        <hr class="my-4" >
+                        <h3 class="display-h2"></h3>
+                        <!-- <h3 class="display-h2">Game Theme:</h3> -->
+                </div>
+              </div>
+        <div>
+            <br> <br>
+        </div>
+
+        <!-- Main Body of the Page-->
+        <div class="container">
+                <!--Side bar menu for selection> -->
+                <div class="col-md-3 side-bar">
+                        <aside class="asidestyle3">
+                                <h4> Word Hint...</h4>
+                                <h5> Game Theme: Fruits</h5>
+                                <table class="stattable">
+                                        <table class="stattable">
+                                                <tr>
+                                                        <td>
+                                                                <label id="wordhint"></label>
+                                                                <div>
+                                                                        <p style="text-align: left; padding: 0%" >This image will give you a clue.</p> 
+                                                                </div>
+                                                                <div id="imageHolder" class="imgHint">
+                                                                        <img src="assets/images/site-construction.jpg" class="center  img-responsive img-thumbnail" border="1px" width="150" height="120" margin-left="auto" alt="Me"  alt="Construction">
+                                                                </div>
+                                                        </td>
+                                                </tr>
+                                        </table>  
+                                </table>                                                                
+                        </aside>
+                </div>
+                <!-- Guessing Word section-->
+                <div class="col-md-6 game-area">
+                        <div class="guess-word">
+                                <!-- <h3>
+                                </h3> -->
+                                <h3 id="result">
+                                                Guessing Word
+                                </h3>
+                                <br>
+                                <!-- Table to hold the User guess-->
+                                <table id="wordTableR" class="TableStyleR">
+                                        <tr id="wordTableRowR" class="RowStyle row">
+
+                                        </tr>
+                                </table>                                 
+                                <!-- Table to hold selected word -->
+                                <table id="wordTable" class="TableStyle">
+                                                <tr id="wordTableRow" class="RowStyle row">
+
+                                                </tr>
+                                </table>
+                        </div>
+                        <hr>
+                        <div class="letter-keyboard">
+                                <h3>Keyboard</h3>
+                                <div class="button-group">
+                                        <button id="bttn1"  type="button" onclick="selectLetter(this.id, 'A')" class="btn btn-primary">A</button>
+                                        <button id="bttn2"  type="button" onclick="selectLetter(this.id, 'B')" class="btn btn-primary">B</button>
+                                        <button id="bttn3"  type="button" onclick="selectLetter(this.id, 'C')" class="btn btn-primary">C</button>
+                                        <button id="bttn4"  type="button" onclick="selectLetter(this.id, 'D')" class="btn btn-primary">D</button>
+                                        <button id="bttn5"  type="button" onclick="selectLetter(this.id, 'E')" class="btn btn-primary">E</button>
+                                        <button id="bttn6"  type="button" onclick="selectLetter(this.id, 'F')" class="btn btn-primary">F</button>
+                                        <button id="bttn7"  type="button" onclick="selectLetter(this.id, 'G')" class="btn btn-primary">G</button>
+                                        <button id="bttn8"  type="button" onclick="selectLetter(this.id, 'H')" class="btn btn-primary">H</button>
+                                        <button id="bttn9"  type="button" onclick="selectLetter(this.id, 'I')" class="btn btn-primary">I</button>
+                                        <button id="bttn10" type="button" onclick="selectLetter(this.id, 'J')" class="btn btn-primary">J</button>
+                                        <button id="bttn11" type="button" onclick="selectLetter(this.id, 'K')" class="btn btn-primary">K</button>
+                                        <button id="bttn12" type="button" onclick="selectLetter(this.id, 'L')" class="btn btn-primary">L</button>
+                                        <button id="bttn13" type="button" onclick="selectLetter(this.id, 'M')" class="btn btn-primary">M</button>
+                                        <button id="bttn14" type="button" onclick="selectLetter(this.id, 'N')" class="btn btn-primary">N</button>
+                                        <button id="bttn15" type="button" onclick="selectLetter(this.id, 'O')" class="btn btn-primary">O</button>
+                                        <button id="bttn16" type="button" onclick="selectLetter(this.id, 'P')" class="btn btn-primary">P</button>
+                                        <button id="bttn17" type="button" onclick="selectLetter(this.id, 'Q')" class="btn btn-primary">Q</button>
+                                        <button id="bttn18" type="button" onclick="selectLetter(this.id, 'R')" class="btn btn-primary">R</button>   
+                                        <button id="bttn19" type="button" onclick="selectLetter(this.id, 'S')" class="btn btn-primary">S</button>
+                                        <button id="bttn20" type="button" onclick="selectLetter(this.id, 'T')" class="btn btn-primary">T</button>
+                                        <button id="bttn21" type="button" onclick="selectLetter(this.id, 'U')" class="btn btn-primary">U</button>
+                                        <button id="bttn22" type="button" onclick="selectLetter(this.id, 'V')" class="btn btn-primary">V</button>
+                                        <button id="bttn23" type="button" onclick="selectLetter(this.id, 'W')" class="btn btn-primary">W</button>
+                                        <button id="bttn24" type="button" onclick="selectLetter(this.id, 'X')" class="btn btn-primary">X</button>   
+                                        <button id="bttn25" type="button" onclick="selectLetter(this.id, 'Y')" class="btn btn-primary">Y</button>
+                                        <button id="bttn26" type="button" onclick="selectLetter(this.id, 'Z')" class="btn btn-primary">Z</button>
+                                </div>
+                        </div>
+                </div>
+                <aside class="col-md-3 aside-menu">
+                        <aside class="asidestyle1">
+                                <h4> Game Statistics</h4>
+                                <table class="stattable">
+                                        <tr>
+                                                <td >Total Chances:</td>
+                                                <td>
+                                                        <label id="totC"></label>
+                                                </td>
+                                        </tr>
+                                </table>
+                                <table class="stattable">
+                                        <tr>
+                                                <td >Remaining Chances:</td>
+                                                <td>
+                                                        <label id="remC"></label>
+                                                </td>
+                                        </tr>
+                                </table>   
+                                <table class="stattable">
+                                        <tr>
+                                                <td >Number of Matches:</td>
+                                                <td>
+                                                        <label id="totM"></label>
+                                                </td>
+                                        </tr>
+                                </table>                                 
+                                <table class="stattable">
+                                        <tr>
+                                                <td >Total Wins:</td>
+                                                <td>
+                                                        <label id="totW"></label>
+                                                </td>
+                                        </tr>
+                                </table>
+                                <table class="stattable">
+                                        <tr>
+                                                <td >Total Losses:</td>
+                                                <td>
+                                                        <label id="totL"></label>
+                                                </td>
+                                        </tr>
+                                </table>                                                               
+                        </aside>
+                        <br>
+                        <aside class="asidestyle2">
+                                <h4>Hangman Destiny</h4>
+                                <div class="imgindex">
+                                        <img src="assets/images/hangman.jpg" class="pull-left  img-responsive img-thumbnail" border="3px" width="200" height="160" alt="Me"  alt="Hangman">
+                                </div>
+                        </aside>
+                </aside>
+                <div class="col-md-12 gameStart">
+                        <button id="bttnGameStart" type="button" onclick="selectGameStart(this.id,)" class="btnStart btn-success">Start the Game</button>
+                </div>
+        </div>
+
+        <!-- <footer class="footer">
+                <div class="container">
+                  <span class="text-muted">Place sticky footer content here.</span>
+                </div>
+        </footer> -->
+        <footer class="footer position-sticky">
+                <div class="container">
+                  <span >Copyright &copy;.</span>
+                </div>
+        </footer>  
+        <!--* CHECK FOT NAVIGATION TAG FOR LINKS */ -->
+    </body>
+</html>        
