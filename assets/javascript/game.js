@@ -27,7 +27,7 @@ function initialload(){
 
 // Initial Prep. Clears keyboard selections, Clear the tables(array) to start fresh
 function selectGameStart(){
-    keyboardReset();
+    keyboardReset("E");
     clearTables();
     document.getElementById("result").innerHTML = "Guessing Word";
     document.getElementById("bttnGameStart").className = "btnStart btn-danger";
@@ -44,12 +44,19 @@ function selectGameStart(){
 }
 
 // Initial Button Reset
-function keyboardReset(){
+function keyboardReset(btnRst){
     var bttnreset = "";
     for (var i =1; i < 27; i++){
         bttnreset = "bttn" + i;
-        document.getElementById(bttnreset).className = "btn btn-primary";
-        document.getElementById(bttnreset).disabled = false;
+        if (btnRst === "E"){
+            document.getElementById(bttnreset).className = "btn btn-primary";
+            document.getElementById(bttnreset).disabled = false;
+        }
+        else{
+            document.getElementById(bttnreset).className = "btn btn-warning";
+            document.getElementById(bttnreset).disabled = true;            
+        }
+
     }
  }
 // Clearing the table cells before starting a new game
@@ -66,10 +73,6 @@ function clearTables(){
             tableID.rows[r].innerHTML = "";
         }
     }
-    //var rowsinTable = tableIDR.getElementsByTagName("tr").length;
-    //var colsinTable = tableRow.getElementsByTagName("td").length;
-    //alert("Table Row Count=" + rowsinTable);
-    //alert("Table Col Count=" + colsinTable);
 }
 
 
@@ -153,7 +156,10 @@ function selectLetter(bttn, BtnVal, wdtable){
     numReq= numReq - 5;
     var numLoss = parseInt(document.getElementById("totL").innerText);
     var remChance = document.getElementById("remC").innerText;
-    var remChance = parseInt(remChance) - 1;
+    if (remChance > 0){
+        var remChance = parseInt(remChance) - 1;
+    }
+
     var numMatch = parseInt(document.getElementById("totM").innerText);
     document.getElementById("remC").innerText = remChance;
     for (var r= 0, n = table.rows.length; r < n; r++){
@@ -180,40 +186,27 @@ function selectLetter(bttn, BtnVal, wdtable){
 
     }
     if (numMatch === numReq){
+
         numW++;
         numWin +=numW;
         document.getElementById("result").innerHTML = "YOU WON!!!";
         document.getElementById("totW").innerText = numWin;
         document.getElementById("bttnGameStart").className = "btnStart btn-success";
         document.getElementById("bttnGameStart").innerHTML = "Start";
+        keyboardReset("D");
     }
     if (remChance <= 0){
         numL++;
         numLoss += numL;
         document.getElementById("totL").innerText = numLoss;    
+        document.getElementById("remC").innerText = 0;
         document.getElementById("result").innerHTML = "YOU LOSE!!!";   
         document.getElementById("bttnGameStart").className = "btnStart btn-success";
         document.getElementById("bttnGameStart").innerHTML = "Start";
+        keyboardReset("D");
     }
-    console.log("Num Win= " + numWin);
-    console.log("Num Loss= " + numLoss);
-    //console.log(sLetter.innerHTML);
-    //alert(btn.Value);
-    // alert(sLetter);
-
-    // var table = document.getElementByTagName("table");
-    // var tr = table.getElementsByTagName("tr");
-    
-    // //var tr = table.getElementByTagName("tr");
-    // var td = tr.getElementByTagName("td");
-    // alert("Number of columns=" + td[1].innerText);
-    // alert("Row lenth#=" + tr);
-    // for (i=0; i < tr.lengh; i++){
-    //     td = tr[0].getElementByTagName("td");
-    //     alert("Number of columns=" + td.length);
-    // }
-    //Selected letter is being searched in the array
-    //letterSearch(sLetter);
+    //console.log("Num Win= " + numWin);
+    //console.log("Num Loss= " + numLoss);
     document.getElementById(bttn).className = "btn btn-warning ";
     document.getElementById(bttn).disabled = true;
 }
@@ -228,6 +221,6 @@ function letterSearch(sLetter){
         td = tr[0].getElementByTagName("td")[0];
         alert("Number of Rows=" + tr[i].length);
     }
-    console.log("Table length1 = " + tr.length);
+    //console.log("Table length1 = " + tr.length);
 }
 
